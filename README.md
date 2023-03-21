@@ -31,6 +31,11 @@ https://devanswers.co/run-multiple-php-versions-on-apache/
 ## instalacion de mysql
 https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04-es
 
+## phpMyAdmin
+https://www.phpmyadmin.net/
+unzip
+mv /var/www/html/
+
 ## virtual host
 
 https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-20-04
