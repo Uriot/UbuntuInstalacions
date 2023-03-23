@@ -27,6 +27,11 @@ https://devanswers.co/run-multiple-php-versions-on-apache/
 - sudo apt install php6-common php6-mysql php6-xml php6-xmlrpc php6-curl php6-gd php6-imagick php6-cli php6-dev php6-imap php6-mbstring php6-opcache php6-soap php6-zip php6-intl -y
 - sudo apt install php5.6-common php5.6-mysql php5.6-xml php5.6-xmlrpc php5.6-curl php5.6-gd php5.6-imagick php5.6-cli php5.6-dev php5.6-imap php5.6-mbstring php5.6-opcache php5.6-soap php5.6-zip php5.6-intl -y
 
+### .htaccess
+<FilesMatch \.php>
+    # Apache 2.4.10+ can proxy to unix socket
+    SetHandler "proxy:unix:/var/run/php/php8.2-fpm.sock|fcgi://localhost/"
+</FilesMatch>
 
 ## instalacion de mysql
 https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04-es
@@ -37,6 +42,23 @@ unzip
 mv /var/www/html/
 
 ## virtual host
+
+<VirtualHost *:80>
+    ServerName cursosplatzi.local
+    DocumentRoot /home/eurizar/proyectos/cursos/platzi/backcend-php/4-intregrac>
+
+   <Directory /home/eurizar/proyectos/cursos/platzi/backcend-php/4-intregracion>
+      Options Indexes FollowSymLinks
+      AllowOverride All
+      Require all granted
+      # SetEnvIf Authorization .+ HTTP_AUTORIZARION=$0
+   </Directory>
+
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
+
+#vim: syntax=apache ts=4 sw=4 sts=4 sr noet
 
 https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-20-04
 
