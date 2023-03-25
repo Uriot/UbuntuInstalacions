@@ -5,12 +5,14 @@ https://www.youtube.com/watch?v=qC0mnGprbeM
 -letras mononoki y roboto
 
 ## Apache
+```
 - sudo apt update
 - sudo apt install apache
+```
 
 ## PHP diferentes versiones y diferentes formas de setearlo
 https://devanswers.co/run-multiple-php-versions-on-apache/
-
+```
 - sudo apt install php8.2 php8.2-fpm php8.2-mysql libapache2-mod-php8.2
 - sudo apt install php8.1 php8.1-fpm php8.1-mysql libapache2-mod-php8.1
 - sudo apt install php8.0 php8.0-fpm php8.0-mysql libapache2-mod-php8.0
@@ -26,23 +28,64 @@ https://devanswers.co/run-multiple-php-versions-on-apache/
 - sudo apt install php7.0-common php7.0-mysql php7.0-xml php7.0-xmlrpc php7.0-curl php7.0-gd php7.0-imagick php7.0-cli php7.0-dev php7.0-imap php7.0-mbstring php7.0-opcache php7.0-soap php7.0-zip php7.0-intl -y
 - sudo apt install php6-common php6-mysql php6-xml php6-xmlrpc php6-curl php6-gd php6-imagick php6-cli php6-dev php6-imap php6-mbstring php6-opcache php6-soap php6-zip php6-intl -y
 - sudo apt install php5.6-common php5.6-mysql php5.6-xml php5.6-xmlrpc php5.6-curl php5.6-gd php5.6-imagick php5.6-cli php5.6-dev php5.6-imap php5.6-mbstring php5.6-opcache php5.6-soap php5.6-zip php5.6-intl -y
-
+```
 ### .htaccess
+```
 <FilesMatch \.php>
     # Apache 2.4.10+ can proxy to unix socket
     SetHandler "proxy:unix:/var/run/php/php8.2-fpm.sock|fcgi://localhost/"
 </FilesMatch>
-
+```
 ## instalacion de mysql
 https://www.digitalocean.com/community/tutorials/how-to-install-mysql-on-ubuntu-20-04-es
 
+## xdebug
+https://xdebug.org/docs/install
+First, you need to update local packages using the following command:
+
+sudo apt update
+# OR
+sudo apt-get update
+Now you can install xdebug with the following command:
+
+sudo apt install php-xdebug
+And configure it as:
+
+sudo nano /etc/php/7.0/mods-available/xdebug.ini
+
+```
+zend_extension=/usr/lib/php/20151012/xdebug.so
+xdebug.remote_autostart = 1
+xdebug.remote_enable = 1
+xdebug.remote_handler = dbgp
+xdebug.remote_host = 127.0.0.1
+xdebug.remote_log = /tmp/xdebug_remote.log
+xdebug.remote_mode = req
+xdebug.remote_port = 9005 #if you want to change the port you can change 
+```
+And then restart the services:
+```
+sudo systemctl restart php7.0-fpm
+sudo systemctl restart nginx # If you are using nginx server
+sudo systemctl restart apache2 # If you are using apache server
+```
+
+```
+sudo apt-get install php8.2-xdebug
+sudo apt-get install php8.1-xdebug
+sudo apt-get install php8.0-xdebug
+sudo apt-get install php7.4-xdebug
+sudo apt-get install php7.0-xdebug
+sudo apt-get install php6.0-xdebug
+sudo apt-get install php5.6-xdebug
+```
 ## phpMyAdmin
 https://www.phpmyadmin.net/
 unzip
 mv /var/www/html/
 
 ## virtual host
-
+```
 <VirtualHost *:80>
     ServerName cursosplatzi.local
     DocumentRoot /home/eurizar/proyectos/cursos/platzi/backcend-php/4-intregrac>
@@ -59,7 +102,7 @@ mv /var/www/html/
 </VirtualHost>
 
 #vim: syntax=apache ts=4 sw=4 sts=4 sr noet
-
+```
 https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-20-04
 
 ## apps
