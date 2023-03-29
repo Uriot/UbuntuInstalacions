@@ -115,7 +115,8 @@ https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-ho
 https://getcomposer.org/download/
 ### wp-cli
 https://make.wordpress.org/cli/handbook/guides/installing/
-
+### node 18
+https://techviewleo.com/how-to-install-node-js-18-lts-on-ubuntu/
 
 - vscode
 - meld
