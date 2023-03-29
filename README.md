@@ -10,6 +10,10 @@ https://www.youtube.com/watch?v=qC0mnGprbeM
 - sudo apt install apache
 ```
 
+apache error php 8.2
+https://www.digitalocean.com/community/tutorials/apache-configuration-error-ah00558-could-not-reliably-determine-the-server-s-fully-qualified-domain-name
+
+
 ## PHP diferentes versiones y diferentes formas de setearlo
 https://devanswers.co/run-multiple-php-versions-on-apache/
 ```
@@ -106,6 +110,13 @@ mv /var/www/html/
 https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-20-04
 
 ## apps
+
+### composer
+https://getcomposer.org/download/
+### wp-cli
+https://make.wordpress.org/cli/handbook/guides/installing/
+
+
 - vscode
 - meld
 - aptitude
