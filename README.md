@@ -4,6 +4,10 @@
 https://www.youtube.com/watch?v=qC0mnGprbeM
 -letras mononoki y roboto
 
+https://www.youtube.com/watch?v=PO_1i_Uh9As
+
+https://www.youtube.com/watch?v=lXIb-1_H-mA&t=61s
+
 ## Apache
 ```
 - sudo apt update
