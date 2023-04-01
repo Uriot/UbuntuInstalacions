@@ -122,6 +122,25 @@ https://make.wordpress.org/cli/handbook/guides/installing/
 ### node 18
 https://techviewleo.com/how-to-install-node-js-18-lts-on-ubuntu/
 
+### git
+```
+sudo apt install git
+```
+si se quiere ver rama en consola 
+```
+sudo nano ~/.bashrc
+```
+copiar y pegar al final de bashrc
+```
+# Show git branch name
+
+function gitbranch() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /'
+}
+
+PS1="\[\e[1;32m\]\u@\h:\[\e[1;34m\]\w \[\e[1;35m\]\$(gitbranch)\[\e[0;00m\]\$\[\e[0;00m\] "
+```
+
 - vscode
 - meld
 - aptitude
