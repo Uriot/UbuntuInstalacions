@@ -113,6 +113,9 @@ mv /var/www/html/
 ```
 https://www.digitalocean.com/community/tutorials/how-to-set-up-apache-virtual-hosts-on-ubuntu-20-04
 
+
+error laravel redirection
+https://www.nicesnippets.com/blog/the-requested-url-was-not-found-on-this-server-apache2441-in-ubuntu-2204
 ## apps
 
 ### composer
