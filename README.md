@@ -144,6 +144,22 @@ function gitbranch() {
 PS1="\[\e[1;32m\]\u@\h:\[\e[1;34m\]\w \[\e[1;35m\]\$(gitbranch)\[\e[0;00m\]\$\[\e[0;00m\] "
 ```
 
+# Error de mysql 8 com php antiguo 5.6 
+
+para solicionar el error:
+
+```
+The server requested authentication method unknown to the client
+```
+
+en el path /etc/mysql/my.cnf pegar esta linea
+
+```
+[mysqld]
+default_authentication_plugin=mysql_native_password
+
+```
+
 - vscode
 - meld
 - aptitude
