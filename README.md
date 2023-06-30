@@ -36,6 +36,8 @@ https://devanswers.co/run-multiple-php-versions-on-apache/
 - sudo apt install php7.0-common php7.0-mysql php7.0-xml php7.0-xmlrpc php7.0-curl php7.0-gd php7.0-imagick php7.0-cli php7.0-dev php7.0-imap php7.0-mbstring php7.0-opcache php7.0-soap php7.0-zip php7.0-intl -y
 - sudo apt install php6-common php6-mysql php6-xml php6-xmlrpc php6-curl php6-gd php6-imagick php6-cli php6-dev php6-imap php6-mbstring php6-opcache php6-soap php6-zip php6-intl -y
 - sudo apt install php5.6-common php5.6-mysql php5.6-xml php5.6-xmlrpc php5.6-curl php5.6-gd php5.6-imagick php5.6-cli php5.6-dev php5.6-imap php5.6-mbstring php5.6-opcache php5.6-soap php5.6-zip php5.6-intl -y
+
+  sudo apt-get install mcrypt php5-mcrypt
 ```
 ### .htaccess
 ```
