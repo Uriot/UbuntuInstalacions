@@ -137,7 +137,7 @@ sudo nano ~/.bashrc
 ```
 copiar y pegar al final de bashrc
 ```
-# Show git branch name
+# Show git branch name in console
 
 function gitbranch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1) /'
